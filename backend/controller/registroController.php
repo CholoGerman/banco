@@ -9,6 +9,7 @@ function GuardarUsuario(){
     $fecha = $_POST['fecha_registro'];
     $resultado = (new usuarios())->GuardarUsuario($nombreCompleto, $numeroCuenta, $correo, $contraseña, $fecha);
     echo json_encode($resultado);
+    
 }
 
 
