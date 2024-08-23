@@ -1,6 +1,5 @@
 <?php
-function connection()
-{
+function connection(){
     $host = "localhost";
     $bd = "banco";
     $usuario = "root";
@@ -9,5 +8,3 @@ function connection()
     $mysqli = new mysqli($host, $usuario, $password, $bd, $puerto);
     return $mysqli;
 }
-
-?>

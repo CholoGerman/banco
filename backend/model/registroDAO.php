@@ -1,6 +1,6 @@
 <?php
 
-require_once "../Conexion/Conexion.php";
+require_once "../conexion/conexion.php";
 
 class usuarios {
 
