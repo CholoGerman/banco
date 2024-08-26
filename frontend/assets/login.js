@@ -8,7 +8,7 @@ function validarContraseña() {
     
     const hasLetter = /[a-zA-Z]/;
 
-    if (password.length < 8) {
+     if (password.length < 8) {
         errorMessage.textContent = "La contraseña debe tener al menos 8 caracteres.";
     } else if (!hasLetter.test(password)) {
         errorMessage.textContent = "La contraseña debe contener al menos una letra.";
