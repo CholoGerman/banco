@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Register</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <script src="index.js"></script>
+
+        <!--Register de usuario-->
+
+        <form action="" class="form" id="form">
+            <h2 class="Register">Registro de Cuenta</h2>
+
+            <label>
+                <a>Nombre Completo</a>
+                <input type="text" placeholder="lyon jeremias corneli zulueta">
+            </label>
+
+            <label>
+                <a>Numero de cuenta</a>
+                <input type="text" placeholder="177013">
+            </label>
+
+            <label>
+                <a>CorreoElectornico</a>
+                <input type="text" placeholder="EspantaAbuelitas37@gmail.com">
+            </label>
+
+            <label>
+                <label for="password">Password:</label>
+                <input type="password" id="password" minlength="8" oninput="validatePassword()" required>
+                <span id="error-message" style="color:rgb(0, 0, 0);"></span>
+                <span id="error-message2" style="color:rgb(0, 0, 0);"></span>
+            </label>
+
+            <label>
+                <a>confirmar contraseña</a>
+                <input type="text" placeholder="***********">
+            </label>
+            <button id="button" type="button" class="button" onclick="process(this)">Register</button>
+
+        </form>
+
+    </body>
+
+
+
+</html>
