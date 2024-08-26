@@ -14,10 +14,12 @@
         <form>
             <label for="email">Correo</label>
             <input type="email" name="email" id="">
-            <label for="contraseña">Contraseña</label>
-            <input type="password" name="contraseña" id="">
+            <label for="contraseña" >Contraseña</label>
+            <input type="password" name="contraseña" id="password" minlength="8" oninput="validarContraseña()" onblur="ocultarError()" required>
+            <span id="error-message" style="color:rgb(0, 0, 0);"></span>
+            <span id="error-message2" style="color:rgb(0, 0, 0);"></span>
 
-            <p>No tenes cuenta? <a href="index.html">Registrate</a></p>
+            <p>No tenes cuenta? <a href="register.html">Registrate</a></p>
             <button type="submit">Login</button>
         </form>
     </div>

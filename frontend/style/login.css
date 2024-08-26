@@ -57,3 +57,8 @@ button {
     border-radius: 5px;
     border:1px solid black;
 }
+
+span{
+    display:block;
+    font-size: 12px;
+}
