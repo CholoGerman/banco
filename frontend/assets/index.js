@@ -6,6 +6,7 @@ function validatePassword() {
 
 
     const hasNumber = /\d/;
+    
 
     if (password.length < 8) {
         errorMessage.textContent = "La contraseño debe tener al menos 8 caracteres.";
