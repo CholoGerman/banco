@@ -13,11 +13,16 @@ body {
 
 .contenedor_login {
     text-align: center;
-    height: 300px;
+    height: 350px;
     width: 300px;
     padding:10px;
     background: #beb311b6;
     border-radius: 25px;
+}
+
+
+form{
+    margin-top: 40px;
 }
 
 h1 {
@@ -26,21 +31,29 @@ h1 {
 label {
     margin-bottom: 15px;
     display:block;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
+    margin-top: 8px;
 }
 
 p{
     text-align: left;
     margin-left: 12px;
+    font-size: 14px;
+    margin-top: 25px;
 }
 
 input{
     margin:2px;
+    border-radius: 4px;
+    border: 1px solid black;
+    width: 70%;
 }
 
 button {
-    margin-top: 12px;
+    margin-top: 25px;
     width: 40%;
     padding:2px;
     letter-spacing: 3px;
+    border-radius: 5px;
+    border:1px solid black;
 }
