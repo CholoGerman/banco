@@ -9,5 +9,14 @@ class transacciones {
         return $respuesta;
     }
 
+    function realizarTransaccion($cuentaDestino, $monto){
+         $sql = "UPDATE cuentas SET saldo = saldo + $monto WHERE numero_cuenta = $cuentaDestino;";
+    
+    
+       
+        
+        
+    }
+
 }
 ?>
