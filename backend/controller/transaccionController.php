@@ -1,6 +1,6 @@
 <?php
-
-function realizarTransaccion(){
+require_once "../model/transaccionDAO.php";
+function guardarTransaccion(){
 
 
     
