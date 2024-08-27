@@ -48,6 +48,6 @@ document.querySelector('#login').addEventListener('submit', function(event) {
     .then(response => response.json())
     .then(data => console.log(data))
     
-
+    
     console.log(datos);
 });
