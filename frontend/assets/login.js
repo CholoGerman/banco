@@ -27,25 +27,27 @@ function ocultarError() {
 
 //Capturar los datos :
 
-document.querySelector('#login').addEventListener('submit') , function(event) {
+document.querySelector('#login').addEventListener('submit', function(event) {
     event.preventDefault();
-    const email = document.querySelector('input[name ="email"]').value;
-    const contraseña = document.querySelector('input[name ="contraseña"]').value;
+
+    const email = document.querySelector('input[name="email"]').value;
+    const contraseña = document.querySelector('input[name="contraseña"]').value;
 
     const datos = {
         email: email,
-        contraseña : contraseña,
-    }
+        contraseña: contraseña,
+    };
 
-};
-
-fetch('http://localhost/banco/backend/controller/loginController.php' ,{
-    method: 'POST',
-    headers: {
+    fetch('http://localhost/banco/backend/controller/loginController.php', {
+        method: 'POST',
+        headers: {
             'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(datos)
-}, 
-)
+        },
+        body: JSON.stringify(datos)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    
 
-console.log(datos);
+    console.log(datos);
+});
