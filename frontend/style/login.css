@@ -18,6 +18,7 @@ body {
     padding:10px;
     background: #beb311b6;
     border-radius: 25px;
+    position: relative;
 }
 
 
@@ -61,4 +62,17 @@ button {
 span{
     display:block;
     font-size: 12px;
+}
+
+
+.a_img{  
+    margin-top: 60px;
+    cursor: pointer;
+    position: relative;
+    top:10px;
+    transition: transform 0.3s ease;
+}
+
+.a_img:hover{
+    transform: scale(1.2);
 }
