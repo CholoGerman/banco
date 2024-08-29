@@ -66,12 +66,16 @@ span{
 
 
 .a_img{  
-    margin-top: 60px;
+    
     cursor: pointer;
     position: relative;
+    display: block;
     top:10px;
     transition: transform 0.3s ease;
+    
 }
+
+
 
 .a_img:hover{
     transform: scale(1.2);
