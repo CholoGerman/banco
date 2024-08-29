@@ -1,0 +1,35 @@
+body {
+    margin:0;
+    background-color: red;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor_transaccion{
+    background-color: blue;
+    height: 400px;
+    width: 400px;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+input{
+    border-radius: 5px;
+}
+
+label{
+    display:block;
+    margin-bottom: 8px;
+    margin-top: 4px;
+}
