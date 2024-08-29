@@ -1,20 +1,37 @@
 
 function validatePassword() {
     const passwordInput = document.getElementById('password');
+    const password2Input = document.getElementById('password2');
     const errorMessage = document.getElementById('error-message');
+    const errorMessage2 = document.getElementById('error-message2');
     const password = passwordInput.value;
+    const password2 = password2Input.value;
 
 
     const hasNumber = /\d/;
     
 
     if (password.length < 8 && password.length > 0) {
-        errorMessage.textContent = "La contraseño debe tener al menos 8 caracteres.";
+        errorMessage.textContent = "La contraseña debe tener al menos 8 caracteres.";
     } else if (!hasNumber.test(password) && password.length > 0) {
         errorMessage.textContent = "La contraseña debe contener al menos un número.";
-    } else {
+    } 
+     else if (password.search(/[a-z]/) == -1 && password.length > 0) {
+        errorMessage.textContent = "La contraseña debe contener al menos una minuscula.";
+      }
+      else if (password.search(/[A-Z]/) == -1 && password.length > 0) {
+        errorMessage.textContent = "La contraseña debe contener al menos una mayuscula.";
+      }
+      else {
         errorMessage.textContent = "";
     }
+
+    if (password != password2 && password2.length > 0){
+        errorMessage2.textContent = "La contraseñas no son iguales.";
+    } else {
+        errorMessage2.textContent = "";
+    }
+    
 
 }
 
