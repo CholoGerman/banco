@@ -15,14 +15,11 @@ function validatePassword() {
         errorMessage.textContent = "La contraseña debe tener al menos 8 caracteres.";
     } else if (!hasNumber.test(password) && password.length > 0) {
         errorMessage.textContent = "La contraseña debe contener al menos un número.";
-    } 
-     else if (password.search(/[a-z]/) == -1 && password.length > 0) {
+    } else if (password.search(/[a-z]/) == -1 && password.length > 0) {
         errorMessage.textContent = "La contraseña debe contener al menos una minuscula.";
-      }
-      else if (password.search(/[A-Z]/) == -1 && password.length > 0) {
+    } else if (password.search(/[A-Z]/) == -1 && password.length > 0) {
         errorMessage.textContent = "La contraseña debe contener al menos una mayuscula.";
-      }
-      else {
+    } else {
         errorMessage.textContent = "";
     }
 
