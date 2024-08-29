@@ -8,29 +8,16 @@ function validatePassword() {
     const hasNumber = /\d/;
     
 
-    if (password.length < 8) {
+    if (password.length < 8 && password.length > 0) {
         errorMessage.textContent = "La contraseño debe tener al menos 8 caracteres.";
-    } else if (!hasNumber.test(password)) {
+    } else if (!hasNumber.test(password) && password.length > 0) {
         errorMessage.textContent = "La contraseña debe contener al menos un número.";
     } else {
-        errorMessage.textContent = "Contraseña valida";
+        errorMessage.textContent = "";
     }
 
 }
 
-function sotruebestie(){
-    const passwordInput = document.getElementById("password");
-    const digest = crypto.subtle.digest('SHA-1', passwordInput);
-    const password = "37117ba38cad98cb753e77c639192adbc1389094";
-    const errorMessage = document.getElementById('error-message2');
-    
-    if (passwordInput == password){
-        errorMessage.textContent = "so true!";
-    }
-    else{
-        errorMessage.textContent = "false!!!!!!";
-    }
-}
 
 //window.onload = () => {
 
