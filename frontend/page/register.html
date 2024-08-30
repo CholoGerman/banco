@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <script src="index.js"></script>
+        <script src="../assets/register.js"></script>
 
         <!--Register de usuario-->
 
@@ -16,30 +16,31 @@
             <h2 class="Register">Registro de Cuenta</h2>
 
             <label>
-                <a>Nombre Completo</a>
-                <input type="text" placeholder="lyon jeremias corneli zulueta">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" placeholder="lyon jeremias corneli zulueta">
             </label>
 
             <label>
-                <a>Numero de cuenta</a>
-                <input type="text" placeholder="177013">
+                <label for="numaccount">Account Number:</label>
+                <input type="text" id="numaccount" placeholder="177013">
             </label>
 
             <label>
-                <a>CorreoElectornico</a>
-                <input type="text" placeholder="EspantaAbuelitas37@gmail.com">
+                <label for="mail">Mail:</label>
+                <input type="text" id="mail" placeholder="EspantaAbuelitas37@gmail.com">
             </label>
 
             <label>
                 <label for="password">Password:</label>
-                <input type="password" id="password" minlength="8" oninput="validatePassword()" required>
+                <input type="password" id="password" placeholder="***********" minlength="8" oninput="validatePassword()" required>
                 <span id="error-message" style="color:rgb(0, 0, 0);"></span>
-                <span id="error-message2" style="color:rgb(0, 0, 0);"></span>
+
             </label>
 
             <label>
-                <a>confirmar contraseña</a>
-                <input type="text" placeholder="***********">
+                <label for="password2">Confirm Password:</label>
+                <input type="password" id="password2" placeholder="***********" oninput="validatePassword()" required>
+                <span id="error-message2" style="color:rgb(0, 0, 0);"></span>
             </label>
             <p>Ya tenes cuenta? <a href="../page/login.html">Login</a></p>
             <button id="button" type="button" class="button" onclick="process(this)">Register</button>

@@ -1,0 +1,75 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin:0;
+    background: linear-gradient(to left, #db1a1a, #530505);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor_transaccion{
+    background: #beb311b6;
+    height: 450px;
+    width: 400px;
+    border-radius: 25px;
+    position: relative;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    letter-spacing: 8px;
+    margin-top: 25px;
+}
+
+input{
+    border-radius: 5px;
+    width: 60%;
+    border: 1px solid black;
+}
+
+label{
+    display:block;
+    margin-bottom: 8px;
+    margin-top: 7px;
+    letter-spacing: 2px;
+}
+
+button{
+    margin-top: 20px;
+}
+
+select{
+    width: 48%;
+
+}
+
+
+a{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+a:hover{
+    transform: scale(1.2);
+}
+
+.opciones {
+    margin-top:30px;
+    display:flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
