@@ -15,7 +15,7 @@ function verSaldo($numeroCuenta){
  
 }
 
-public function cargarSaldo($id_cuenta, $monto, $moneda){
+/* public function cargarSaldo($id_cuenta, $monto, $moneda){
     $sql = "";
     $connection = connection();
 
@@ -37,6 +37,7 @@ public function cargarSaldo($id_cuenta, $monto, $moneda){
     $respuesta = $connection->query($sql);
     return $respuesta;
 }
+    */
 }
 
 

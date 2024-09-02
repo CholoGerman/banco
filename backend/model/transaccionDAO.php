@@ -26,6 +26,8 @@ class transacciones {
         if(array_key_exists($moneda, $conversiones)){
             $montoUYU = $monto * $conversiones[$moneda];
             $sql = "UPDATE cuentas SET saldo = saldo + $montoUYU WHERE cuenta_destino = $cuentaDestino;";
+            $sql = "UPDATE cuentas SET saldo = saldo - $montoUYU WHERE cuenta_origen = $cuentaDestino;";
+
         } else {
            
             return "Moneda no disponible";
