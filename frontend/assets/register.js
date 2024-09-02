@@ -41,7 +41,7 @@ window.onload = () => {
     }
 
 function agregarElemento(){
-    let formdato = document.querySelector('#login');
+    let formdato = document.querySelector('#registro');
     formdato.onsubmit = (event) => {
         event.preventDefault();
         registroUsuario(formdato);
@@ -61,7 +61,7 @@ function registroUsuario(form){
     .then(data => {
         alert(data.message);
         if(data.success){
-            document.getElementById('login').reset();
+            document.getElementById('registro').reset();
         }
     })
 
