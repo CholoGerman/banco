@@ -2,6 +2,11 @@
 
 require_once "../conexion/conexion.php";
 
+class usuarios {
+
+
+
+}
 
 
 
