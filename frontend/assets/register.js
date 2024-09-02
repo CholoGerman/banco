@@ -33,6 +33,45 @@ function validatePassword() {
 }
 
 
+
+window.onload = () => {
+
+    agregarElemento();
+
+    }
+
+function agregarElemento(){
+    let formdato = document.querySelector('#login');
+    formdato.onsubmit = (event) => {
+        event.preventDefault();
+        registroUsuario(formdato);
+    }
+}
+
+function registroUsuario(form){
+
+    const datos = new FormData(form);
+
+    fetch('http://localhost/banco/banco-1/backend/controller/registroController.php' , {
+        method : 'POST',
+        body: datos
+    })
+
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+        if(data.success){
+            document.getElementById('login').reset();
+        }
+    })
+
+    .catch(error =>
+        console.error('Error:' , error)
+    );
+
+}
+
+
 //window.onload = () => {
 
     /*function process(){
