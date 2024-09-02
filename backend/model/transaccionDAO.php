@@ -9,13 +9,27 @@ class transacciones {
         return $respuesta;
     }
 
-    function realizarTransaccion($cuentaDestino, $monto){
-         $sql = "UPDATE cuentas SET saldo = saldo + $monto WHERE numero_cuenta = $cuentaDestino;";
-    
+    public function RealizarTransaccion($cuentaDestino, $monto, $moneda){
+        $sql = "";
+        $connection = connection();
     
        
-        
-        
+        $conversiones = array(
+            "USD" => 40, 
+            "EUR" => 45, 
+            "UYU" => 1  
+        );
+    
+        if(array_key_exists($moneda, $conversiones)){
+            $montoUYU = $monto * $conversiones[$moneda];
+            $sql = "UPDATE cuentas SET saldo = saldo + $montoUYU WHERE cuenta_destino = $cuentaDestino;";
+        } else {
+           
+            return "Moneda no disponible";
+        }
+    
+        $respuesta = $connection->query($sql);
+        return $respuesta;
     }
 
 }
