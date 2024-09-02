@@ -1,13 +1,12 @@
 <?php
-
+require_once '../model/SesionDAO.php';
 function login(){
 
     $correo = $_POST['correo'];
     $contraseña = $_POST['contraseña'];
- 
-    $hashedPassword = '$2y$10$V7H/Jr.mOafUoL5/7sjZjODJ/4UJoDgVQQ0fH0RgyxXPuFe/0z8Je';
 
-if (password_verify($contraseña, $hashedPassword)) {
+
+if (($)) {
     session_start();
     $_SESSION['correo'] = $correo;
     echo "¡Contraseña correcta!";
@@ -22,7 +21,7 @@ if (password_verify($contraseña, $hashedPassword)) {
 
 function logOut(){
     session_start();
-    session_destroy();
+    session_unset();
     header('Location: ../../frontend/page/login.html');
     exit;
 }
