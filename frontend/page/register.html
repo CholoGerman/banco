@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <script src="../assets/register.js"></script>
+       
 
 
         <form action="registro.php" class="form" id="registro">
@@ -16,22 +16,22 @@
 
             <label>
                 <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" placeholder="lyon jeremias corneli zulueta">
+                <input type="text" name="nombre_completo" id="fullname" placeholder="lyon jeremias corneli zulueta">
             </label>
 
             <label>
                 <label for="numaccount">Account Number:</label>
-                <input type="text" id="numaccount" placeholder="177013">
+                <input type="text" name="numero_cuenta" id="numaccount" placeholder="177013">
             </label>
 
             <label>
                 <label for="mail">Mail:</label>
-                <input type="text" id="mail" placeholder="EspantaAbuelitas37@gmail.com">
+                <input type="text" name="correo_electronico" id="mail" placeholder="EspantaAbuelitas37@gmail.com">
             </label>
 
             <label>
                 <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="***********" minlength="8" oninput="validatePassword()" required>
+                <input type="password" name="contraseña" id="password" placeholder="***********" minlength="8" oninput="validatePassword()" required>
                 <span id="error-message" style="color:rgb(0, 0, 0);"></span>
 
             </label>
@@ -46,6 +46,8 @@
 
         </form>
 
+
+        <script src="../assets/register.js"></script>
     </body>
 
 
