@@ -1,5 +1,7 @@
 <?php
 
+require_once "../conexion/conexion.php";
+
 class transacciones {
 
     public function GuardarTransaccion( $nombreCompleto, $numeroCuenta, $correo, $contraseña, $fecha){
@@ -17,7 +19,8 @@ class transacciones {
         $conversiones = array(
             "USD" => 40, 
             "EUR" => 45, 
-            "UYU" => 1  
+            "UYU" => 1,
+            "REAL" => 7.19 
         );
     
         if(array_key_exists($moneda, $conversiones)){

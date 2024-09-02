@@ -19,4 +19,12 @@ if (password_verify($contraseña, $hashedPassword)) {
 
 }
 
+
+function logOut(){
+    session_start();
+    session_destroy();
+    header('Location: login.php');
+    exit;
+}
+
 ?>
