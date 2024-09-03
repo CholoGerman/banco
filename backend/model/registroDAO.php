@@ -13,7 +13,7 @@ class usuarios {
     }
 
     public function EliminarUsuario($id_user){
-        $sql = "DELETE FROM Usuario WHERE id_user = $id_user;";
+        $sql = "DELETE FROM usuarios WHERE id_user = $id_user;";
         $connection = connection();
         $respuesta = $connection->query($sql);
         return $respuesta;
