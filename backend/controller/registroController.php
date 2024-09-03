@@ -6,7 +6,7 @@ $funcion = $_POST['funcion'];
 
 switch ($funcion) {
     case "Guardar":
-        GuardarUsuario();
+        RegistrarUsuario();
     break;
     case "Eliminar":
         EliminarUsuario();
@@ -17,12 +17,12 @@ switch ($funcion) {
 
 
 
-function GuardarUsuario(){
+function RegistrarUsuario(){
     $nombreCompleto = $_POST['nombre_completo'];
     $numeroCuenta = $_POST['numero_cuenta'];
     $correo = $_POST['correo_electronico'];
     $contraseña = $_POST['contraseña'];
-    $resultado = (new usuarios())->GuardarUsuario($nombreCompleto, $numeroCuenta, $correo, $contraseña);
+    $resultado = (new usuarios())->RegistrarUsuario($nombreCompleto, $numeroCuenta, $correo, $contraseña);
     echo json_encode($resultado);
 }
 

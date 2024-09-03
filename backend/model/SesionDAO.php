@@ -2,24 +2,18 @@
 
 require_once "../conexion/conexion.php";
 
-class usuarios {
-  
-    if(isset($_POST['loginButton'])){
-        $correo=$_POST['correo'];
-        $contraseña=$_POST['contraseña'];
-    
-        $sql="SELECT * FROM usuarios WHERE correo='$correo' && contraseña= '$contraseña'";
-        $connection = connection();
-        $respuesta = $connection->query($sql);
-        return $respuesta;
-        echo 'Bienvenido';
-        header('location: ../../frontend/page/transaccion.html')
-    } else{
-        echo 'Por favor inicia sesión';
-        header('Location: ../../frontend/page/login.php');
+class SesionDAO {
+    private $conn;
+    function getUsuarioCorreo($correo) {
+        $query = "SELECT * FROM usuarios WHERE correo = '$correo'";
+        $result = mysqli_query($this->conn, $query);
+        $usuario = mysqli_fetch_assoc($result);
+        return $usuario;
     }
- 
 
+    function __destruct() {
+        mysqli_close($this->conn);
+    }
 }
 
 ?>

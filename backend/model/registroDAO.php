@@ -4,7 +4,7 @@ require_once "../conexion/conexion.php";
 
 class usuarios {
 
-    public function GuardarUsuario($nombreCompleto, $numeroCuenta, $correo, $contraseña){
+    public function RegistrarUsuario($nombreCompleto, $numeroCuenta, $correo, $contraseña){
         $sql = "INSERT INTO usuarios(0, nombre_completo, numero_cuenta, correo_electronico, contraseña, 0) VALUES( '$nombreCompleto', '$numeroCuenta', '$correo', '$contraseña');";
         $connection = connection();
         $respuesta = $connection->query($sql);
