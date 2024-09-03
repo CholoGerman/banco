@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //verificar campos
         if (cuentaOrigen.value.trim() === "" || cuentaDestinatario.value.trim() === "" || monto.value.trim() === "") {
-            alert("Por favor, completa todos los campos.");
+            alert("Por favor, completar todos los campos.");
             return;
         }
 
